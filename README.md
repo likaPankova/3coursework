@@ -22,26 +22,20 @@
 ---
 
 ## Структура репозитория
-forecasting-sports/
-├── Final_Report_2025.pdf           # Полный отчёт по проекту (включая методы, анализ, выводы)
-├── forecasting_final_uefa.py       # Основной скрипт: Poisson-модели (GLM, XGBoost, LightGBM)
-├── ml_with_gridsearch.py           # ML-модели с подбором гиперпараметров (Random Forest, Logistic Regression, SVM)
-├── load_matches.py                 # Веб-скрейпинг матчей с soccer365.ru (сбор данных)
-├── main.py                         # Telegram-бот: интерфейс для пользователей
-├── models.py                       # Функции загрузки и применения моделей
-├── data/                           # Сырые и обработанные данные
-│   ├── raw/                        # Сырые данные (результаты матчей, HTML-страницы)
-│   └── processed/                  # Обработанный датафрейм (матчи, статистика, таргет)
-├── models_saved/                   # Сохранённые модели (Pickle-файлы)
-│   ├── poisson_xgb_model.pkl
-│   ├── random_forest_model.pkl
-│   └── ...
-├── notebooks/                      # Jupyter-ноутбуки для анализа и визуализации
-│   ├── exploratory_data_analysis.ipynb
-│   └── sentiment_analysis_demo.ipynb
-├── requirements.txt                # Зависимости Python
-├── LICENSE                         # Лицензия проекта (например, MIT)
-└── README.md                     # Этот файл — описание проекта
+
+**Описание файлов:**
+
+- `Final_Report_2025.pdf` — Полный отчёт по проекту: методология, модели, результаты, анализ сентимента.
+- `forecasting_final_uefa.py` — Реализация Poisson-моделей (GLM, XGBoost Poisson, LightGBM Poisson).
+- `ml_with_gridsearch.py` — Обучение ML-моделей (Random Forest, Logistic Regression, SVM) с подбором гиперпараметров.
+- `load_matches.py` — Парсинг данных о матчах с сайта [soccer365.ru](https://soccer365.ru).
+- `main.py` — Код Telegram-бота для интерактивного получения прогнозов.
+- `models.py` — Вспомогательные функции для загрузки и применения моделей.
+- `data/raw/` — Сырые данные (HTML, JSON, исходные результаты матчей).
+- `data/processed/` — Очищенный датафрейм с признаками (xG, владение, удары и т.д.).
+- `requirements.txt` — Список Python-зависимостей.
+- `README.md` — Описание проекта.
+
 
 ## Как запустить
 
